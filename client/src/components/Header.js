@@ -1,26 +1,43 @@
 import React from 'react'
 import { BrowserRouter as Router, NavLink } from 'react-router-dom'
+import 'styles/header.scss'
 
-const Header = () => (
-  <Router forceRefresh={true}>
-    <nav className='nav'>
-      <ul className='nav__list'>
-        <li className='nav__list-item'>
-          <NavLink activeClassName='active' to='/about'>
-            About
-          </NavLink>
-        </li>
-        <li className='nav__list-item'>
-          <NavLink activeClassName='active' to='/portfolio'>
-            Portfolio
-          </NavLink>
-        </li>
-        <li className='nav__list-item'>
-          <button className='btn'>Sitemap</button>
-        </li>
-      </ul>
-    </nav>
-  </Router>
-)
+const links = [
+  {
+    id: '0',
+    name: 'About',
+    path: '/about',
+  },
+  {
+    id: '1',
+    name: 'Portfolio',
+    path: '/portfolio',
+  },
+]
+
+function Header(props) {
+  let linksList = links.map(link => (
+    <li
+      className='nav-list__list-item nav-list__list-item--route'
+      key={link.id}
+    >
+      <NavLink activeClassName='active' to={link.path}>
+        {link.name}
+      </NavLink>
+    </li>
+  ))
+  return (
+    <Router forceRefresh={true}>
+      <nav className='navigation'>
+        <ul className='nav-list'>
+          {linksList}{' '}
+          <li className='nav-list__list-item nav-list__list-item--sitemap'>
+            <span>Sitemap</span>
+          </li>
+        </ul>
+      </nav>
+    </Router>
+  )
+}
 
 export default Header

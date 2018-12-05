@@ -4,7 +4,7 @@ import { BrowserRouter as Router, NavLink } from 'react-router-dom'
 
 class PreFooter extends Component {
   render() {
-    const preFooterLinks = [
+    /*    const preFooterLinks = [
       {
         id: '0',
         name: 'mikal.callahan@icloud.com',
@@ -14,6 +14,7 @@ class PreFooter extends Component {
         name: 'Selected Works',
       },
     ]
+    */
     return (
       <section className='pre-footer'>
         <ul className='pre-footer__list'>

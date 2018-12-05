@@ -1,0 +1,41 @@
+@import 'styles/_colors.scss';
+
+/* NavBar Styles */
+nav .active {
+  color: $font-color--alt;
+}
+
+.navigation {
+  align-items: center;
+  color: $font-color--alt;
+  display: flex;
+  justify-content: right;
+  height: auto;
+  width: 100%;
+}
+
+.nav-list {
+  align-items: center;
+  background-color: $background-color--alt;
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  padding: 0;
+  width: 25%;
+}
+
+.nav-list__list-item--route {
+  display: none;
+}
+
+.nav-list__list-item--sitemap {
+  align-items: center;
+  cursor: pointer;
+  display: flex;
+  font-size: 20px;
+  font-size: 2rem;
+  font-weight: bold;
+  height: 100%;
+  padding: 2rem;
+  width: auto;
+}
