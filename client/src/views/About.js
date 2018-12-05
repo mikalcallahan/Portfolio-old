@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 // import { withRouter } from 'react-router-dom'
+import PageHeader from 'components/PageHeader.js'
+import Paragraph from 'components/Paragraph.js'
 import 'styles/about.scss'
 
 class About extends Component {
@@ -16,6 +18,9 @@ class About extends Component {
   */
   render() {
     // const { match, location, history } = this.props
+    const introParagraph = `I am a software developer and ui/ux designer in love with the process of designing and developing user experiences.
+       I create full-stack solutions to web oriented needs, from e-commerce to web apps.`
+
     const specializeIn = [
       {
         id: '0',
@@ -34,20 +39,6 @@ class About extends Component {
       },
       { id: '3', name: 'Consulting', desc: 'If you just want some advice' },
     ]
-
-    function Header(props) {
-      return <h1 className='offset--red'> Mikal Callahan </h1>
-    }
-    function Intro(props) {
-      return (
-        <p>
-          {' '}
-          I am a software developer and ui/ux designer in love with the process
-          of designing and developing user experiences. I create full-stack
-          solutions to web oriented needs, from e-commerce to web apps.{' '}
-        </p>
-      )
-    }
     function Specialize(props) {
       let specializedList = specializeIn.map(item => (
         <li className='specialize__link' key={item.id}>
@@ -87,12 +78,12 @@ class About extends Component {
       )
     }
     return (
-      <div className='about'>
-        <Header />
-        <Intro />
+      <section className='about'>
+        <PageHeader title='Mikal Callahan' />
+        <Paragraph className='p--xl' paragraph={introParagraph} />
         <Specialize />
         <Create />
-      </div>
+      </section>
     )
   }
 }
