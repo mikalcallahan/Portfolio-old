@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 // import { withRouter } from 'react-router-dom'
-import PageHeader from 'components/PageHeader.js'
+import PageTitle from 'components/PageTitle.js'
 import Paragraph from 'components/Paragraph.js'
 import 'styles/about.scss'
 
@@ -79,7 +79,7 @@ class About extends Component {
     }
     return (
       <section className='about'>
-        <PageHeader title='Mikal Callahan' />
+        <PageTitle title='Mikal Callahan' />
         <Paragraph className='p--xl' paragraph={introParagraph} />
         <Specialize />
         <Create />

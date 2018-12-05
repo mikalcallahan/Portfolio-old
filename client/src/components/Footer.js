@@ -1,4 +1,6 @@
 import React, { Component } from 'react'
+import PreFooter from 'components/PreFooter'
+import FooterLinks from 'components/FooterLinks'
 import 'styles/footer.scss'
 
 class Footer extends Component {
@@ -20,18 +22,12 @@ class Footer extends Component {
         url: 'https://www.github.com/mikalcallahan',
       },
     ]
-
-    function FooterLinks(props) {
-      const footerList = footerLinks.map(link => (
-        <li className='footer__link' key={link.id}>
-          <a href={link.url} target='_blank' rel='noopener noreferrer'>
-            {link.name}
-          </a>
-        </li>
-      ))
-      return <ul className='footer__links'>{footerList}</ul>
-    }
-    return <section className='footer'>{<FooterLinks />}</section>
+    return (
+      <footer className='footer'>
+        {<PreFooter />}
+        {<FooterLinks links={footerLinks} />}
+      </footer>
+    )
   }
 }
 

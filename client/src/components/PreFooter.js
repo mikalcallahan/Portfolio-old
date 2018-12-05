@@ -18,11 +18,16 @@ class PreFooter extends Component {
       <section className='pre-footer'>
         <ul className='pre-footer__list'>
           <li className='pre-footer__link'>
-            <a className='link'>mikal.callahan@icloud.com</a>
+            <a
+              className='link'
+              href='mailto:mikal.callahan@icloud.com?subject=Hey there'
+            >
+              mikal.callahan@icloud.com
+            </a>
           </li>
           <li className='pre-footer__link'>
-            <Router>
-              <NavLink className='link' to='/portfolio/'>
+            <Router forceRefresh={true}>
+              <NavLink className='link' to='/portfolio'>
                 Selected Works
               </NavLink>
             </Router>
