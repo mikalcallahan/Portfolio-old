@@ -1,0 +1,26 @@
+/* Breakpoint Mixins */
+
+@mixin breakpoint($device) {
+  @if $device == xlarge {
+    @media (min-width: 1680px) {
+      @content;
+    }
+  } @else if $device == large {
+    @media (min-width: 1280px) {
+      @content;
+    }
+  } @else if $device == medium {
+    @media (min-width: 980px) {
+      @content;
+    }
+  } @else if $device == small {
+    @media (min-width: 736px) {
+      @content;
+    }
+  } @else if $device == xsmall {
+    @media (min-width: 480px) {
+      @content;
+    }
+  }
+}
+

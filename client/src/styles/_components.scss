@@ -1,0 +1,13 @@
+/* Components.scss */
+@import '@/styles/_colors.scss';
+
+button {
+  background: none;
+  border: none;
+  color: $font-color;
+  cursor: pointer;
+  font-size: 12px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  letter-spacing: 2%;
+}
