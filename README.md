@@ -6,12 +6,9 @@
 A portfolio template using react.js and express.js (among other things). Componetized and BEM - approved.
 
 ### todo
-
-
-#### client
 See TODO.md
    ``` 
    Portfolio/
-   --/docs/
-   | --/TODO.md
+   |--/docs/
+      | --/TODO.md
 
