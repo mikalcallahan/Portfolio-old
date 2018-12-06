@@ -1,6 +1,14 @@
 /* Components.scss */
-@import '@/styles/_colors.scss';
+@import 'styles/_colors.scss';
 
+/* Grid Variables */
+$column-gutter: 2rem;
+$column-gutter--px: 20px;
+$grid-column--mobile: repeat(2, 1fr);
+$grid-column--tablet: repeat(5, 1fr);
+$grid-column-desktop: repeat(16, 1fr);
+
+/* HTML Elements */
 button {
   background: none;
   border: none;
@@ -10,4 +18,47 @@ button {
   font-size: 1.2rem;
   font-weight: bold;
   letter-spacing: 2%;
+}
+
+h1 {
+  font-size: 36px;
+  font-size: 3.6rem;
+  letter-spacing: 2%;
+}
+
+p .p--xl {
+  font-size: 28px;
+  font-size: 2.8rem;
+  font-weight: 500;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style-type: none;
+}
+
+/* User Defined Components */
+a.email {
+  text-transform: lowercase;
+}
+
+.link {
+  color: inherit;
+  font-weight: 500;
+  font-size: 16px;
+  font-size: 1.6rem;
+  letter-spacing: 0.5px;
+  // letter-spacing: 0.05rem;
+  text-decoration: none;
+  text-transform: capitalize;
+}
+
+.link--lg {
+  font-size: 20px;
+  font-size: 2rem;
+  // letter-spacing: 2%;
 }

@@ -1,11 +1,21 @@
+/* Portfolio.js
+ *
+ * @author Mikal Callahan
+ * @version a-0.0.1
+ */
+
 import React, { Component } from 'react'
 // import PropTypes from 'prop-types'
 import PageTitle from 'components/PageTitle'
 import Paragraph from 'components/Paragraph'
-import Work from 'components/Work'
+import Project from 'components/Project'
 
-// import 'styles/portfolio.scss'
-
+/* Portfolio class
+ *
+ * @class
+ * @returns portfolio page
+ * @todo possibly move projects to seperate component
+ */
 export default class Portfolio extends Component {
   render() {
     const introParagraph = `Below is an excerpt of digitally crafted pieces with a focus on user-centered experiences, visual appeal, and functionality.`
@@ -47,7 +57,7 @@ export default class Portfolio extends Component {
       <section className='portfolio'>
         <PageTitle title='Selected Works' />
         <Paragraph className='p--xl' paragraph={introParagraph} />
-        <Work project={projects} />
+        <Project project={projects} />
       </section>
     )
   }

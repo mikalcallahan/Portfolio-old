@@ -1,14 +1,22 @@
+/* About.js
+ *
+ * @author Mikal Callahan
+ * @version a-0.0.1
+ */
+
 import React, { Component } from 'react'
-import PropTypes from 'prop-types'
-// import { withRouter } from 'react-router-dom'
+// import PropTypes from 'prop-types'
 import PageTitle from 'components/PageTitle.js'
 import Paragraph from 'components/Paragraph.js'
 import 'styles/about.scss'
 
-class About extends Component {
-  constructor(props) {
-    super(props)
-  }
+/* About Class
+ *
+ * @class
+ * @returns About Page
+ */
+
+export default class About extends Component {
   /*
   static propTypes = {
     match: PropTypes.object.isRequired,
@@ -39,6 +47,14 @@ class About extends Component {
       },
       { id: '3', name: 'Consulting', desc: 'If you just want some advice' },
     ]
+
+    /* Specialize Component
+     *
+     * Displays the specialize section of about
+     * @params props
+     * @returns specialize section
+     * @todo rename/refactor to general component
+     */
     function Specialize(props) {
       let specializedList = specializeIn.map(item => (
         <li className='specialize__link' key={item.id}>
@@ -58,6 +74,13 @@ class About extends Component {
         </div>
       )
     }
+    /* Create Component
+     *
+     * Displays the create section of about
+     * @params props
+     * @returns create section
+     * @todo rename/refactor to general component
+     */
     function Create(props) {
       return (
         <div className='create'>
@@ -87,5 +110,3 @@ class About extends Component {
     )
   }
 }
-
-export default About

@@ -1,6 +1,14 @@
+/* Header.js
+ *
+ * @author: Mikal Callahan
+ * @version: a-0.0.1
+ */
+
+// Imports
 import React, { Component } from 'react'
 import { BrowserRouter as Router, NavLink } from 'react-router-dom'
 import Menu from 'components/Menu'
+import 'styles/_components.scss'
 import 'styles/header.scss'
 
 const links = [
@@ -15,20 +23,32 @@ const links = [
     path: '/portfolio',
   },
 ]
-
-class Header extends Component {
+/* Header
+ *
+ * @class
+ * @returns routed header
+ * @todo refactor like Footer.js
+ */
+export default class Header extends Component {
+  /* Constructor
+   * @params props
+   */
   constructor(props) {
     super(props)
     this.state = { isMenuOpen: false }
   }
 
+  /* GetLinks
+   *
+   * @returns list of navigation links
+   */
   getLinks = () => {
     let linksList = links.map(link => (
       <li
         className='nav-list__list-item nav-list__list-item--route'
         key={link.id}
       >
-        <NavLink activeClassName='active' to={link.path}>
+        <NavLink className='link' activeClassName='active' to={link.path}>
           {link.name}
         </NavLink>
       </li>
@@ -36,6 +56,10 @@ class Header extends Component {
     return linksList
   }
 
+  /* toggleMenu
+   * toggles the state of isMenuOpen
+   *
+   */
   toggleMenu = () => {
     const toggle = !this.state.isMenuOpen
     this.setState({ isMenuOpen: toggle })
@@ -50,8 +74,11 @@ class Header extends Component {
           <nav className='nav'>
             <ul className='nav-list'>
               {this.getLinks()}{' '}
-              <li className='nav-list__list-item nav-list__list-item--sitemap'>
-                <span onClick={this.toggleMenu}>Sitemap</span>
+              <li
+                onClick={this.toggleMenu}
+                className='nav-list__list-item nav-list__list-item--sitemap'
+              >
+                <span className='link'>Sitemap</span>
               </li>
             </ul>
           </nav>
@@ -60,5 +87,3 @@ class Header extends Component {
     )
   }
 }
-
-export default Header

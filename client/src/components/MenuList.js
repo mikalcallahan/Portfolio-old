@@ -1,7 +1,17 @@
+/* MenuList.js
+ *
+ * @author Mikal Callahan
+ * @version a-0.0.1
+ */
 import React from 'react'
 import { NavLink } from 'react-router-dom'
 
-function MenuList(props) {
+/* MenuList
+ *
+ * @params props
+ * @returns unordered list of menu items
+ */
+export default function MenuList(props) {
   const menuItems = [
     {
       id: '0',
@@ -23,5 +33,3 @@ function MenuList(props) {
   ))
   return <ul className='menu-list'> {menuList} </ul>
 }
-
-export default MenuList

@@ -1,7 +1,20 @@
+/* PreFooter.js
+ *
+ * @author Mikal Callahan
+ * @version a-0.0.1
+ *
+ */
+
 import React, { Component } from 'react'
 import { BrowserRouter as Router, NavLink } from 'react-router-dom'
-// import 'styles/preFooter.scss'
 
+/* PreFooter
+ *
+ * PreFooter class
+ * @class
+ * @returns PreFooter
+ * @todo refactor
+ */
 class PreFooter extends Component {
   render() {
     /*    const preFooterLinks = [
@@ -20,7 +33,7 @@ class PreFooter extends Component {
         <ul className='pre-footer__list'>
           <li className='pre-footer__link'>
             <a
-              className='link'
+              className='link email'
               href='mailto:mikal.callahan@icloud.com?subject=Hey there'
             >
               mikal.callahan@icloud.com

@@ -1,31 +1,60 @@
-@import 'styles/_colors.scss';
+@import 'styles/app.scss';
 
 /* NavBar Styles */
 nav .active {
-  color: $font-color--alt;
+  color: $font-color--grey;
 }
 
 .nav {
   align-items: center;
+  background-color: $background-color--alt;
   color: $font-color--alt;
   display: flex;
-  justify-content: right;
+  justify-content: flex-end;
   height: auto;
-  width: 100%;
+  margin-left: auto;
+  width: 25%;
+  @include breakpoint(medium) {
+    background-color: $background-color;
+    color: $font-color;
+    display: grid;
+    column-gap: $column-gutter--px;
+    column-gap: $column-gutter;
+    grid-template-columns: repeat(16, 1fr);
+    width: 100%;
+  }
 }
 
 .nav-list {
   align-items: center;
-  background-color: $background-color--alt;
   display: flex;
-  justify-content: center;
-  height: 100%;
-  padding: 0;
-  width: 25%;
+  height: 60px;
+  height: 6rem;
+  width: 100%;
+  @include breakpoint(small) {
+    height: 67px;
+    height: 6.7rem;
+    font-size: 20px;
+    font-size: 2rem;
+  }
+  @include breakpoint(medium) {
+    grid-column: 1 / 16;
+    justify-content: flex-end;
+  }
+}
+
+.nav-list__list-item {
 }
 
 .nav-list__list-item--route {
   display: none;
+  @include breakpoint(medium) {
+    display: inherit;
+    padding: 2rem;
+    &:first-child {
+      padding: 0;
+    }
+  }
 }
 
 .nav-list__list-item--sitemap {
@@ -36,6 +65,13 @@ nav .active {
   font-size: 2rem;
   font-weight: bold;
   height: 100%;
-  padding: 2rem;
-  width: auto;
+  justify-content: center;
+  // padding: 2rem;
+  width: 100%;
+  @include breakpoint(medium) {
+    font-size: initial;
+    font-weight: initial;
+    justify-content: flex-end;
+    width: auto;
+  }
 }

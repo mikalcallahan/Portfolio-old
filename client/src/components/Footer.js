@@ -1,14 +1,27 @@
+/* Footer.js
+ *
+ * @author: Mikal Callahan
+ * @version: a-0.0.1
+ */
+
+// Imports
 import React, { Component } from 'react'
 import PreFooter from 'components/PreFooter'
 import FooterLinks from 'components/FooterLinks'
 import 'styles/footer.scss'
 
-class Footer extends Component {
-  constructor(props) {
-    super(props)
-  }
+/* Footer class
+ *
+ * @class
+ * @returns <footer>
+ *
+ */
+export default class Footer extends Component {
+  /* Gets footer links
+   *
+   * @returns {array[object]}footerLinks
+   */
   getFooterLinks = () => {
-    console.log('540')
     return [
       {
         id: '0',
@@ -26,8 +39,6 @@ class Footer extends Component {
         url: 'https://www.github.com/mikalcallahan',
       },
     ]
-
-    //return footerLinks
   }
   render() {
     return (
@@ -38,5 +49,3 @@ class Footer extends Component {
     )
   }
 }
-
-export default Footer

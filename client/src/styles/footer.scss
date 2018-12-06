@@ -1,7 +1,68 @@
 /* Footer Styles */
 
+@import 'styles/_breakpoints.scss';
+@import 'styles/_components.scss';
+
 .footer {
   bottom: 0;
-  position: fixed;
-  color: blue;
+  display: flex;
+  grid-gap: $column-gutter--px;
+  grid-gap: $column-gutter;
+  flex-wrap: wrap;
+  height: auto;
+  position: relative;
+  width: 100%;
+  @include breakpoint(small) {
+    display: grid;
+    grid-column: 1 / 6;
+    //grid-row: 1 / 3;
+    grid-template-columns: repeat(5, 1fr);
+    // grid-template-rows: repeat(2, 1fr);
+  }
+  @include breakpoint(medium) {
+    display: grid;
+    grid-column: 1 / 17;
+    grid-template-columns: repeat(16, 1fr);
+  }
+}
+
+.pre-footer {
+  width: 100%;
+  @include breakpoint(small) {
+    grid-column: 1 / 6;
+  }
+  @include breakpoint(medium) {
+    grid-column: 1 / 17;
+  }
+}
+
+.footer__links {
+  align-items: center;
+  display: flex;
+  justify-content: flex-start;
+  height: auto;
+  width: 100%;
+  @include breakpoint(small) {
+    justify-content: flex-end;
+    grid-column: 1 / 6;
+  }
+  @include breakpoint(medium) {
+    grid-column: 1 / 16;
+  }
+}
+
+.footer__link {
+  padding: 2rem;
+  height: auto;
+  &:first-child {
+    padding: 0;
+  }
+  &:last-child {
+    padding: 0;
+  }
+}
+
+.pre-footer__list {
+  height: auto;
+  width: 100%;
 }

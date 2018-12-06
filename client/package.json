@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "esdoc-jsx-plugin": "^1.0.0",
     "node-sass": "^4.10.0",
     "prettier": "^1.15.3",
     "react": "^16.6.3",
@@ -27,5 +28,8 @@
     "not ie <= 11",
     "not op_mini all"
   ],
-  "devDependencies": {}
+  "devDependencies": {
+    "esdoc": "^1.1.0",
+    "esdoc-standard-plugin": "^1.0.0"
+  }
 }
