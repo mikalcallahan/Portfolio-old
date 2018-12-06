@@ -4,8 +4,12 @@ import FooterLinks from 'components/FooterLinks'
 import 'styles/footer.scss'
 
 class Footer extends Component {
-  render() {
-    const footerLinks = [
+  constructor(props) {
+    super(props)
+  }
+  getFooterLinks = () => {
+    console.log('540')
+    return [
       {
         id: '0',
         name: 'instagram',
@@ -22,10 +26,14 @@ class Footer extends Component {
         url: 'https://www.github.com/mikalcallahan',
       },
     ]
+
+    //return footerLinks
+  }
+  render() {
     return (
       <footer className='footer'>
         {<PreFooter />}
-        {<FooterLinks links={footerLinks} />}
+        {<FooterLinks links={this.getFooterLinks()} />}
       </footer>
     )
   }
