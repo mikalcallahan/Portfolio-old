@@ -1,0 +1,8 @@
+@import 'styles/_colors.scss';
+.nav--menu {
+  background-color: $background-color--alt;
+  height: 100%;
+  position: absolute;
+  width: 100%;
+  z-index: 10;
+}

@@ -13,6 +13,12 @@
  */
 
 /* html, body setup */
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
 html,
 body {
   border-sizing: border-box;
@@ -31,10 +37,17 @@ html {
   font-size: 62.5%; // 1.0rem = 10px
 }
 
+body {
+  font-size: 2.4rem;
+}
+
 /* General app styling */
 #root,
 #app {
   display: flex;
+  font-size: 20px;
+  font-size: 2rem;
+  font-weight: 500;
   flex-wrap: wrap;
   height: 100%;
   width: 100%;

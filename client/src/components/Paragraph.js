@@ -7,6 +7,7 @@ import React from 'react'
 
 /* Paragraph
  *
+ * @params props
  * @returns Paragraph
  */
 const Paragraph = props => (

@@ -4,9 +4,13 @@
 /* Grid Variables */
 $column-gutter: 2rem;
 $column-gutter--px: 20px;
-$grid-column--mobile: repeat(2, 1fr);
-$grid-column--tablet: repeat(5, 1fr);
-$grid-column-desktop: repeat(16, 1fr);
+$grid-column--small: #{1 / 3};
+$grid-column--medium: #{1 / 6};
+$grid-column--large: #{2 / 15};
+// $grid-column--large: #{1 / 17};
+$grid-template-column--small: repeat(2, 1fr);
+$grid-template-column--medium: repeat(5, 1fr);
+$grid-template-column--large: repeat(16, 1fr);
 
 /* HTML Elements */
 button {
@@ -23,10 +27,28 @@ button {
 h1 {
   font-size: 36px;
   font-size: 3.6rem;
-  letter-spacing: 2%;
 }
 
-p .p--xl {
+h5 {
+  font-size: 25px;
+  font-size: 2.5rem;
+  font-weight: 500;
+}
+
+p {
+  font-size: 24px;
+  font-size: 2.4rem;
+  font-weight: 500;
+}
+
+p.p--sub {
+  color: $font-color--grey;
+  font-size: 20px;
+  font-size: 2rem;
+}
+
+p.p--xl {
+  // line-height: 150%;
   font-size: 28px;
   font-size: 2.8rem;
   font-weight: 500;
@@ -48,6 +70,7 @@ a.email {
 
 .link {
   color: inherit;
+  cursor: pointer;
   font-weight: 500;
   font-size: 16px;
   font-size: 1.6rem;
@@ -61,4 +84,14 @@ a.email {
   font-size: 20px;
   font-size: 2rem;
   // letter-spacing: 2%;
+}
+
+.link--inherit {
+  font-size: inherit;
+  font-weight: inherit;
+  letter-spacing: initial;
+}
+
+.underline {
+  text-decoration: underline;
 }

@@ -8,9 +8,12 @@ import React from 'react'
 
 /* PageHeader Component
  *
+ * @params props
  * @returns PageHeader
  */
 
-const PageHeader = props => <h1 className='offset--red'>{props.title}</h1>
+const PageHeader = props => (
+  <h1 className='page-title offset--red'>{props.title}</h1>
+)
 
 export default PageHeader

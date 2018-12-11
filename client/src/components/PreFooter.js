@@ -6,7 +6,8 @@
  */
 
 import React, { Component } from 'react'
-import { BrowserRouter as Router, NavLink } from 'react-router-dom'
+import { BrowserRouter as Router, NavLink, withRouter } from 'react-router-dom'
+import PropTypes from 'prop-types'
 
 /* PreFooter
  *
@@ -16,18 +17,23 @@ import { BrowserRouter as Router, NavLink } from 'react-router-dom'
  * @todo refactor
  */
 class PreFooter extends Component {
+  static propTypes = {
+    match: PropTypes.object.isRequired,
+    location: PropTypes.object.isRequired,
+    history: PropTypes.object.isRequired,
+  }
+  getPageName = () => {
+    const page = this.props.location.pathname.substr(1)
+    if (page === 'about') return 'Selected Works'
+    return 'About'
+  }
+  getPageLink = () => {
+    const page = this.props.location.pathname.substr(1)
+    if (page === 'about') return '/portfolio'
+    return '/about'
+  }
+
   render() {
-    /*    const preFooterLinks = [
-      {
-        id: '0',
-        name: 'mikal.callahan@icloud.com',
-      },
-      {
-        id: '1',
-        name: 'Selected Works',
-      },
-    ]
-    */
     return (
       <section className='pre-footer'>
         <ul className='pre-footer__list'>
@@ -41,8 +47,8 @@ class PreFooter extends Component {
           </li>
           <li className='pre-footer__link'>
             <Router forceRefresh={true}>
-              <NavLink className='link' to='/portfolio'>
-                Selected Works
+              <NavLink className='link' to={this.getPageLink()}>
+                {this.getPageName()}
               </NavLink>
             </Router>
           </li>
@@ -51,9 +57,5 @@ class PreFooter extends Component {
     )
   }
 }
-/*
- *      <NavLink className='link' to='/about'>
-        Selected Works
-      </NavLink>
-      */
-export default PreFooter
+
+export default withRouter(PreFooter)

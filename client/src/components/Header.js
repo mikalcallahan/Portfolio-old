@@ -7,7 +7,7 @@
 // Imports
 import React, { Component } from 'react'
 import { BrowserRouter as Router, NavLink } from 'react-router-dom'
-import Menu from 'components/Menu'
+import MenuOverlay from 'components/MenuOverlay'
 import 'styles/_components.scss'
 import 'styles/header.scss'
 
@@ -43,7 +43,8 @@ export default class Header extends Component {
    * @returns list of navigation links
    */
   getLinks = () => {
-    let linksList = links.map(link => (
+    let linksList
+    linksList = links.map(link => (
       <li
         className='nav-list__list-item nav-list__list-item--route'
         key={link.id}
@@ -69,9 +70,9 @@ export default class Header extends Component {
     return (
       <Router forceRefresh={true}>
         {this.state.isMenuOpen ? (
-          <Menu />
+          <MenuOverlay />
         ) : (
-          <nav className='nav'>
+          <nav className='nav nav-short'>
             <ul className='nav-list'>
               {this.getLinks()}{' '}
               <li

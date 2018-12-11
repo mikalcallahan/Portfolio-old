@@ -29,6 +29,16 @@ export default class About extends Component {
     const introParagraph = `I am a software developer and ui/ux designer in love with the process of designing and developing user experiences.
        I create full-stack solutions to web oriented needs, from e-commerce to web apps.`
 
+    const Selfie = () => (
+      <div className='selfie'>
+        <img
+          className='selfie__img'
+          src='https://source.unsplash.com/random'
+          alt='mikal web developer'
+        />
+      </div>
+    )
+
     const specializeIn = [
       {
         id: '0',
@@ -66,11 +76,6 @@ export default class About extends Component {
         <div className='specialize'>
           <h5> I specialize in </h5>
           <ul className='specialize__list'>{specializedList}</ul>
-          <img
-            className='specialize__img'
-            src='https://source.unsplash.com/random'
-            alt='mikal web developer'
-          />
         </div>
       )
     }
@@ -94,8 +99,24 @@ export default class About extends Component {
           </p>
           <p>
             I have had the pleasure of working with wonderful people including
-            Bettina Heinz, Adaptive Web Studio, Heavenly Gift Baskets, and
-            Tiled.
+            Bettina Heinz,{' '}
+            <span className='underline'>
+              {' '}
+              <a
+                className='link link--inherit'
+                href='https://www.adaptivewebstudio.com/'
+              >
+                {' '}
+                Adaptive Web Studio
+              </a>
+            </span>
+            , Heavenly Gift Baskets, and{' '}
+            <span className='underline'>
+              <a className='link link--inherit' href='https://tiled.co/'>
+                Tiled
+              </a>
+            </span>
+            .
           </p>
         </div>
       )
@@ -103,7 +124,8 @@ export default class About extends Component {
     return (
       <section className='about'>
         <PageTitle title='Mikal Callahan' />
-        <Paragraph className='p--xl' paragraph={introParagraph} />
+        <Paragraph className='intro p--xl' paragraph={introParagraph} />
+        <Selfie />
         <Specialize />
         <Create />
       </section>

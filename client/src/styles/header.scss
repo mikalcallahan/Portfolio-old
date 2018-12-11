@@ -5,7 +5,7 @@ nav .active {
   color: $font-color--grey;
 }
 
-.nav {
+.nav.nav-short {
   align-items: center;
   background-color: $background-color--alt;
   color: $font-color--alt;
@@ -20,7 +20,7 @@ nav .active {
     display: grid;
     column-gap: $column-gutter--px;
     column-gap: $column-gutter;
-    grid-template-columns: repeat(16, 1fr);
+    grid-template-columns: $grid-template-column--large;
     width: 100%;
   }
 }
@@ -38,7 +38,8 @@ nav .active {
     font-size: 2rem;
   }
   @include breakpoint(medium) {
-    grid-column: 1 / 16;
+    // grid-column: $grid-column--large;
+    grid-column: 1 / 15;
     justify-content: flex-end;
   }
 }
