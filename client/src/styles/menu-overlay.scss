@@ -1,8 +1,29 @@
+@import 'styles/_breakpoints.scss';
 @import 'styles/_colors.scss';
+@import 'styles/_components.scss';
 .nav--menu {
   background-color: $background-color--alt;
+  display: grid;
+  grid-template-columns: $grid-template-column--small;
+  grid-gap: 2rem;
   height: 100%;
-  position: absolute;
+  position: fixed;
   width: 100%;
   z-index: 10;
+  @include breakpoint(small) {
+    grid-template-columns: $grid-template-column--medium;
+  }
+  @include breakpoint(medium) {
+    grid-template-columns: $grid-template-column--large;
+  }
+}
+
+.btn.btn--close {
+  color: $font-color--red;
+  grid-column: 14;
+}
+
+.menu-list {
+  grid-column: 6 / 14;
+  vertical-align: middle;
 }

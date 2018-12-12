@@ -6,7 +6,6 @@
 
 import React from 'react'
 import { BrowserRouter as Router } from 'react-router-dom'
-import 'feather-icons'
 import MenuList from 'components/MenuList'
 import 'styles/menu-overlay.scss'
 
@@ -16,12 +15,9 @@ import 'styles/menu-overlay.scss'
  * @todo possibly make a true Component
  */
 
-const MenuOverlay = () => (
+const MenuOverlay = props => (
   <Router forceRefresh={true}>
-    <nav className='nav nav--menu'>
-      <i data-feather='plug' />
-      <MenuList />
-    </nav>
+    <MenuList />
   </Router>
 )
 
