@@ -13,7 +13,7 @@ $grid-template-column--medium: repeat(5, 1fr);
 $grid-template-column--large: repeat(16, 1fr);
 
 /* HTML Elements */
-button {
+/*button {
   background: none;
   border: none;
   color: $font-color;
@@ -23,7 +23,7 @@ button {
   font-weight: bold;
   letter-spacing: 2%;
 }
-
+*/
 h1 {
   font-size: 36px;
   font-size: 3.6rem;
@@ -41,13 +41,13 @@ p {
   font-weight: 500;
 }
 
-p.p--sub {
+.p--sub {
   color: $font-color--grey;
   font-size: 20px;
   font-size: 2rem;
 }
 
-p.p--xl {
+.p--xl {
   // line-height: 150%;
   font-size: 28px;
   font-size: 2.8rem;
@@ -66,6 +66,21 @@ li {
 /* User Defined Components */
 a.email {
   text-transform: lowercase;
+}
+.btn {
+  background: none;
+  border: none;
+  color: $font-color;
+  cursor: pointer;
+  font-size: 12px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  letter-spacing: 2%;
+}
+
+.btn.btn--close {
+  color: $font-color--red;
+  transform: rotate(45deg);
 }
 
 .link {

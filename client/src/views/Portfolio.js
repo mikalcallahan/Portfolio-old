@@ -9,7 +9,7 @@ import React, { Component } from 'react'
 import PageTitle from 'components/PageTitle'
 import Paragraph from 'components/Paragraph'
 import Project from 'components/Project'
-
+import 'styles/portfolio.scss'
 /* Portfolio class
  *
  * @class
@@ -26,7 +26,7 @@ export default class Portfolio extends Component {
         role: 'Creative and Technical Vision',
         desc:
           'A restaurant discovery  suited to finding you the perfect match.',
-        img: [{ src: 'https://source.unsplash.com/random' }],
+        img: { src: 'https://source.unsplash.com/random' },
       },
       {
         key: '1',
@@ -34,7 +34,7 @@ export default class Portfolio extends Component {
         role: 'Web Design, Development',
         desc:
           'An enterprises website for Bettina Heinz to host her chemistry related works.',
-        img: [{ src: 'https://source.unsplash.com/random' }],
+        img: { src: 'https://source.unsplash.com/random' },
       },
       {
         key: '2',
@@ -42,7 +42,7 @@ export default class Portfolio extends Component {
         role: 'Web Design, Development, E-Commerce',
         desc:
           'A completely original website dedicated to being the E-Commerce platform for Bettina Heinz to sell her art.',
-        img: [{ src: 'https://source.unsplash.com/random' }],
+        img: { src: 'https://source.unsplash.com/random' },
       },
       {
         key: '3',
@@ -50,7 +50,7 @@ export default class Portfolio extends Component {
         role: 'Full-Stack Development',
         desc:
           'Worked in-house at Tiled to develop a web app for their presentation platform to be used in Instructure’s Canvas and Bridge.',
-        img: [{ src: 'https://source.unsplash.com/random' }],
+        img: { src: 'https://source.unsplash.com/random' },
       },
     ]
     return (

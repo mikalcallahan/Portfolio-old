@@ -9,7 +9,7 @@ import React, { Component } from 'react'
 import { BrowserRouter as Router, NavLink } from 'react-router-dom'
 import MenuOverlay from 'components/MenuOverlay'
 import { Plus } from 'react-feather'
-import 'styles/_components.scss'
+//import 'styles/_components.scss'
 import 'styles/header.scss'
 
 const links = [
@@ -72,7 +72,9 @@ export default class Header extends Component {
       <Router forceRefresh={true}>
         {this.state.isMenuOpen ? (
           <nav className='nav nav--menu'>
-            <Plus onClick={this.toggleMenu} className='btn btn--close' />
+            <span className='close-div'>
+              <Plus onClick={this.toggleMenu} className='btn btn--close' />
+            </span>
             <MenuOverlay isOpen={this.isMenuOpen} />
           </nav>
         ) : (

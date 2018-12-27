@@ -31,5 +31,5 @@ export default function MenuList(props) {
       </NavLink>
     </li>
   ))
-  return <ul className='menu-list'> {menuList} </ul>
+  return <ul className='menu-list p--xl link'> {menuList} </ul>
 }

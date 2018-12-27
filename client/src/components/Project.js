@@ -15,15 +15,18 @@ import React from 'react'
 export default function Project(props) {
   let projectList = props.project.map(project => (
     <li className='projects-list__project' key={project.key}>
-      <div className='left'>
-        {project.name}
-        {project.role}
-        {project.desc}
-      </div>
+      <div className='left'>{project.name}</div>
+      <div className='left'>{project.role}</div>{' '}
       <div className='right'>
-        <img src={project.img.src} alt={project.name} />
+        <img src={project.img.src} alt={project.img.src} />
       </div>
+      <div className='left'>{project.desc}</div>
     </li>
   ))
-  return <ul>{projectList}</ul>
+  return (
+    <div className='projects'>
+      {' '}
+      <ul className='project-list'>{projectList}</ul>{' '}
+    </div>
+  )
 }
