@@ -9,6 +9,8 @@
   grid-gap: $column-gutter--px;
   grid-gap: $column-gutter;
   flex-wrap: wrap;
+  padding: $padding-px;
+  padding: $padding;
   height: auto;
   position: relative;
   width: 100%;
@@ -24,6 +26,11 @@
 
 .pre-footer {
   width: 100%;
+  .pre-footer__link {
+    .link.nav {
+      visibility: hidden;
+    }
+  }
   @include breakpoint(small) {
     grid-column: $grid-column--medium;
   }
@@ -61,4 +68,8 @@
 .pre-footer__list {
   height: auto;
   width: 100%;
+  .pre-footer__link:last-child {
+    pointer-events: none;
+    text-decoration: line-through;
+  }
 }

@@ -5,7 +5,12 @@
  */
 
 import React from 'react'
-import Project from 'components/Project'
+import axios from 'axios'
+import cose from 'assets/works/cose.jpg'
+import bhArt from 'assets/works/bhart.jpg'
+import foodgorilla from 'assets/works/foodgorilla.png'
+import 'styles/project-list.scss'
+// import Project from 'components/Project'
 
 /* ProjectList Component
  *
@@ -15,6 +20,41 @@ import Project from 'components/Project'
  * @todo setup similar to FooterLinks or MenuList
  *
  */
-export default function ProjectList(props) {
-  return null
+const ProjectList = [
+  {
+    id: '0',
+    name: 'Cosé, aménagement intérior',
+    //src: {cose},
+  },
+  {
+    id: '1',
+    name: 'Bettina Heinz Art',
+    src: {bhArt},
+  }
+]
+
+function ListWorks(props) {
+       // let worksList = selectedWorks.map(item => (
+  /*let worksList = ProjectList.map(item => (
+  <li className='work' key={item.id}>
+    <img className='work' alt={item.name} src={item.src}/>
+  </li>
+  ))*/
+  return (
+    <div className='works'>
+      <ul className='works__list'>
+        <li className='work__item' key='0'>
+          <img className='work__img' alt='Cosé, aménagement intérior' src={cose}/>
+          </li>
+         <li className='work__item' key='1'>
+          <img className='work__img fg' alt='Food Gorilla' src={foodgorilla}/>
+        </li>
+        <li className='work__item' key='1'>
+          <img className='work__img' alt='Bettina Heinz Art' src={bhArt}/>
+        </li>
+      </ul>
+    </div>
+  )
 }
+
+export default ListWorks

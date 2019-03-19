@@ -47,7 +47,7 @@ class PreFooter extends Component {
           </li>
           <li className='pre-footer__link'>
             <Router forceRefresh={true}>
-              <NavLink className='link' to={this.getPageLink()}>
+              <NavLink className='link nav' to={this.getPageLink()}>
                 {this.getPageName()}
               </NavLink>
             </Router>

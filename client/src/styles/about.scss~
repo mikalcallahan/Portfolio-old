@@ -1,0 +1,82 @@
+/* About Styles */
+@import 'styles/_breakpoints.scss';
+@import 'styles/_components.scss';
+@import 'styles/_variables.scss';
+
+.about {
+  display: grid;
+  grid-template-columns: $grid-template-column--small;
+  grid-gap: $column-gutter--px;
+  grid-gap: $column-gutter;
+  * {
+    grid-column: $grid-column--small;
+    @include breakpoint(small) {
+      grid-column: $grid-column--medium;
+    }
+    @include breakpoint(medium) {
+      grid-column: $grid-column--large;
+    }
+  }
+  @include breakpoint(small) {
+    grid-template-columns: $grid-template-column--medium;
+  }
+  @include breakpoint(medium) {
+    grid-template-columns: $grid-template-column--large;
+  }
+}
+
+.page-title {
+  padding: 0 $padding-px;
+  padding: 0 $padding;
+  @include breakpoint(small) {
+    grid-column: 1 / 6;
+  }
+}
+
+.intro {
+  padding: $padding-px;
+  padding: 0 0 40px $padding;
+  @include breakpoint(small) {
+    grid-column: 1 / 6;
+  }
+  @include breakpoint(medium) {
+    grid-column: 2 / 15;
+  }
+}
+
+.selfie {
+  display: flex;
+  height: auto;
+  width: 100%;
+  @include breakpoint(small) {
+    grid-column: 1 / 5;
+  }
+  @include breakpoint(medium) {
+    grid-column: 10 / 15;
+  }
+  .selfie__img {
+    display: flex;
+    height: auto;
+    width: 100%;
+  }
+}
+
+.specialize {
+  padding: $padding-px;
+  padding: $padding;
+  width: 100%;
+  @include breakpoint(small) {
+    grid-column: 1 / 6;
+  }
+  @include breakpoint(medium) {
+    grid-column: 2 / 15;
+  }
+}
+.create {
+  padding: $padding-px;
+  padding: $padding;
+  width: 100%;
+  @include breakpoint(medium) {
+    grid-column: 2 / 15;
+  }
+}

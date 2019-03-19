@@ -33,13 +33,12 @@
     grid-column: $grid-column--large;
   }
 
-  padding: 0 6rem;
   @include breakpoint(medium) {
     grid-column: 2 / 12;
   }
 }
 
-.p--xl {
+.portfolio.p--xl {
   grid-column: $grid-column--small;
   @include breakpoint(small) {
     grid-column: $grid-column--medium;
@@ -61,6 +60,7 @@
 }
 
 .project-list {
+  align-items: center;
   display: flex;
   flex-wrap: wrap;
   height: 100%;
@@ -72,25 +72,55 @@
 .projects-list__project {
   background-color: $background-color--alt;
   color: $font-color--alt;
-  // display: flex;
+  display: flex;
+  flex-wrap: wrap;
+  grid-template-columns: $grid-template-column--large;
+  grid-template-rows: repeat(9, 1fr);
   margin: 0.25rem 0;
   padding: 2rem 0;
   width: 100%;
   img {
     width: 100%;
   }
+  @include breakpoint(medium) {
+    display: grid;
+  }
 }
 
+.project__title {
+  grid-column: 3 / 8;
+  grid-row: 3 / 7;
+  width: 100%;
+}
+
+.project__role {
+  // grid-column: 3 / 8;
+  // grid-row: ;
+}
+
+.project__img {
+  grid-column: 11 / 15;
+  grid-row: 2 / 8;
+}
+.project__desc {
+  grid-column: 3 / 8;
+  grid-row: 5 / 8;
+  width: 100%;
+}
 .left {
+  /*
   @include breakpoint(medium) {
     margin-right: auto;
     width: 50%;
-  }
+  } */
+  grid-area: left;
 }
 
 .right {
+  /*
   @include breakpoint(medium) {
     margin-left: auto;
     width: 50%;
-  }
+  }*/
+  grid-area: right;
 }

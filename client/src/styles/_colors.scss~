@@ -1,0 +1,18 @@
+/* Colors.scss */
+
+// Various Color Definitions
+$black: #242326;
+$white: #f6f6f6;
+$offset--red: #cc9292;
+$offset--red2: #aa7c7c;
+// $grey: #949494;
+$grey: #666567;
+$red: #e14949;
+
+/* UI Colors */
+$background-color: $white;
+$background-color--alt: $black;
+$font-color: $black;
+$font-color--alt: $white;
+$font-color--grey: $grey;
+$font-color--red: $red;

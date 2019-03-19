@@ -18,11 +18,12 @@ export default function MenuList(props) {
       name: 'About',
       path: '/about',
     },
-    {
+    /*{
       id: '1',
       name: 'Portfolio',
       path: '/portfolio',
     },
+    */
   ]
   let menuList = menuItems.map(item => (
     <li className='menu-list__item' key={item.id}>

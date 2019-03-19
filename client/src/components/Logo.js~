@@ -1,0 +1,6 @@
+/* Logo
+ * 
+ * @returns logo
+ */
+import react from 'react'
+import 

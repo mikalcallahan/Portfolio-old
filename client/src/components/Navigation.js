@@ -19,13 +19,13 @@ import Portfolio from 'views/Portfolio'
  *
  * @returns Router
  * @todo turn into actual component?
+ *  <Route path='/portfolio/' component={Portfolio} />
  */
 
 const Navigation = () => (
   <Router>
     <Switch>
       <Route path='/about/' component={About} />
-      <Route path='/portfolio/' component={Portfolio} />
       <Redirect to='/about' />
     </Switch>
   </Router>

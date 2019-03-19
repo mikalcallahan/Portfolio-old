@@ -9,6 +9,7 @@ import React, { Component } from 'react'
 import { BrowserRouter as Router, NavLink } from 'react-router-dom'
 import MenuOverlay from 'components/MenuOverlay'
 import { Plus } from 'react-feather'
+import Logo from 'components/Logo' 
 //import 'styles/_components.scss'
 import 'styles/header.scss'
 
@@ -72,6 +73,7 @@ export default class Header extends Component {
       <Router forceRefresh={true}>
         {this.state.isMenuOpen ? (
           <nav className='nav nav--menu'>
+            {<Logo/>}
             <span className='close-div'>
               <Plus onClick={this.toggleMenu} className='btn btn--close' />
             </span>
@@ -80,7 +82,8 @@ export default class Header extends Component {
         ) : (
           <nav className='nav nav-short'>
             <ul className='nav-list'>
-              {this.getLinks()}{' '}
+              {<Logo/>}
+              {/*this.getLinks()*/}{' '}
               <li
                 onClick={this.toggleMenu}
                 className='nav-list__list-item nav-list__list-item--sitemap'

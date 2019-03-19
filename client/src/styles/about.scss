@@ -1,22 +1,32 @@
 /* About Styles */
 @import 'styles/_breakpoints.scss';
+@import 'styles/_colors.scss';
 @import 'styles/_components.scss';
+@import 'styles/_variables.scss';
 
 .about {
-  display: grid;
-  grid-template-columns: $grid-template-column--small;
-  grid-gap: $column-gutter--px;
-  grid-gap: $column-gutter;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  h4 {
+    // margin-bottom: 2rem;
+  }
+  // grid-template-columns: $grid-template-column--small;
+ /*
   * {
     grid-column: $grid-column--small;
     @include breakpoint(small) {
       grid-column: $grid-column--medium;
+      grid-gap: $column-gutter--px;
+      grid-gap: $column-gutter;
     }
     @include breakpoint(medium) {
       grid-column: $grid-column--large;
     }
   }
+  */
   @include breakpoint(small) {
+    display: grid;
     grid-template-columns: $grid-template-column--medium;
   }
   @include breakpoint(medium) {
@@ -24,24 +34,63 @@
   }
 }
 
-.page-title {
+.about .page-title {
+  margin: 0;
+  padding: $padding-px;
+  padding: 0 0 40px $padding;
   @include breakpoint(medium) {
-    grid-column: 2 / 12;
+    display: none;
+  }
+  div {
+    padding-bottom: 25%;
   }
 }
 
 .intro {
-  @include breakpoint(medium) {
-    grid-column: 2 / 12;
+  background-color: $background-color;
+  margin: 0;
+  padding: $padding-px;
+  padding: $padding;
+  //padding: 0 0 40px $padding;
+  p {
+    animation-duration: 2.5s;
+    animation-name: fadeIn;
   }
+  @include breakpoint(small) {
+    grid-column: $grid-column--medium;
+    padding: initial;
+  }
+  @include breakpoint(medium) {
+    align-items: center;
+    display: flex;
+    grid-column: 2 / 16;
+    height: 100vh;
+    text-align: center;
+  }
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  15% { opacity: .15 }
+  27% { opacity: .27 }
+  40% { opacity: .40 }
+  53% { opacity: .53 } 
+  66% { opacity: .66 }
+  79% { opacity: .78 }
+  92% { opacity: .92 }
+  100% { opacity: 1 }
 }
 
 .selfie {
   display: flex;
   height: auto;
+  padding: %padding;
   width: 100%;
+  @include breakpoint(small) {
+    grid-column: 1 / 5;
+  }
   @include breakpoint(medium) {
-    grid-column: 10 / 15;
+    grid-column: 8 / 15;
   }
   .selfie__img {
     display: flex;
@@ -51,14 +100,48 @@
 }
 
 .specialize {
+/*  animation-duration: 3s;
+  animation-name: fadeIn;*/
+  padding: $padding-px;
+  padding: $padding;
+  padding-bottom: 15%;
   width: 100%;
+  h4 {
+    margin-bottom: 25px;
+    margin-bottom: 2.5rem;
+  }
+  .specialize__title {
+    margin: 25px auto;
+    margin: 2.5rem auto;
+  }
+  @include breakpoint(small) {
+    grid-column: $grid-column--medium;
+  }
   @include breakpoint(medium) {
-    grid-column: 2 / 7;
+    grid-column: $grid-column--large;
+    .specialize__desc {
+      padding-left: 4rem;
+    }
   }
 }
 .create {
+/*  animation-duration: 3s;
+  animation-name: fadeIn;*/
+  padding: $padding-px;
+  padding: $padding;
+  padding-bottom: 30%;
   width: 100%;
+  h4 {
+  margin-bottom: 20px;
+  margin-bottom: 2rem;
+  }
+  p:first-child {
+    padding-bottom: 2rem;
+  }
+  @include breakpoint(small) {
+    grid-column: $grid-column--medium;
+  }
   @include breakpoint(medium) {
-    grid-column: 2 / 15;
+    grid-column: 2 / 14;
   }
 }

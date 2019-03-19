@@ -25,7 +25,8 @@ body {
   border-sizing: border-box;
   background-color: $background-color;
   color: $font-color;
-  font-family: $font-stack;
+  font-family: $font-stack--body;
+  font-weight: 400;
   height: 100%;
   margin: 0;
   padding: 0;

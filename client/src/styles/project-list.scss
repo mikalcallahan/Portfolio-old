@@ -1,0 +1,67 @@
+@import 'styles/_breakpoints.scss';
+@import 'styles/_components.scss';
+@import 'styles/_variables.scss';
+
+.works {
+  padding: $padding 0;
+  @include breakpoint(small) {
+    grid-column: $grid-column--medium;
+  }
+  @include breakpoint(medium) {
+    display: grid;
+    grid-template-columns: $grid-template-column--large;
+    grid-column: $grid-column--large;
+  }
+  width: 100%;
+}
+
+.works__list {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  @include breakpoint(medium) {
+    // display: grid;
+    grid-column: 1 / 17;
+    grid-template-columns: $grid-template-column--large;
+  }
+}
+
+.work__item {
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  margin: .25rem 0 .15rem 0;
+  // padding: 2rem 0;
+  width: 100%;
+  @include breakpoint(medium) {
+    // display: grid;
+    margin: 2rem 0 6rem 0;
+    width: 60%;
+    &:nth-child(n) {
+      grid-column: 1 / 8;
+    }
+    &:nth-child(2) {
+      margin-left: auto;
+      width: 50%;
+      //grid-column: 9 / 16;
+    }
+    &:nth-child(3) .work__img {
+      //width: 75%;
+    }
+  }
+}
+
+.work__img {
+  display: flex;
+  margin: 6rem;
+  @include breakpoint(medium) {
+    width: 100%;
+  }
+  &.fg {
+    width: 27.5%;
+    @include breakpoint(small) {
+      width: 27.5%;
+    }
+  }
+
+}

@@ -1,0 +1,128 @@
+/* Components.scss */
+@import 'styles/_colors.scss';
+
+/* Grid Variables */
+$column-gutter: 2rem;
+$column-gutter--px: 20px;
+$grid-column--small: #{1 / 3};
+$grid-column--medium: #{1 / 6};
+$grid-column--large: #{2 / 15};
+// $grid-column--large: #{1 / 17};
+$grid-template-column--small: repeat(2, 1fr);
+$grid-template-column--medium: repeat(5, 1fr);
+$grid-template-column--large: repeat(16, 1fr);
+
+/* Variables */
+$padding-px: 10px;
+$padding: 1.0rem;
+
+/* HTML Elements */
+/*button {
+  background: none;
+  border: none;
+  color: $font-color;
+  cursor: pointer;
+  font-size: 12px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  letter-spacing: 2%;
+}
+*/
+h1 {
+  font-size: 36px;
+  font-size: 3.6rem;
+}
+
+h4 {
+  font-size: 48px;
+  font-size: 4.8rem;
+}
+
+h5 {
+  font-size: 25px;
+  font-size: 2.5rem;
+  font-weight: 500;
+}
+
+p {
+  line-height: 110%;
+  font-size: 24px;
+  font-size: 2.4rem;
+  font-weight: 500;
+}
+
+.p--sub {
+  color: $font-color--grey;
+  line-height: 110%;
+  font-size: 20px;
+  font-size: 2rem;
+}
+
+.p--xl {
+  // line-height: 150%;
+  font-size: 36px;
+  font-size: 3.6rem;
+  font-weight: 500;
+}
+
+.p--xxl {
+  font-size: 72px;
+  font-size: 7.2rem;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style-type: none;
+}
+
+/* User Defined Components */
+a.email {
+  text-transform: lowercase;
+}
+.btn {
+  background: none;
+  border: none;
+  color: $font-color;
+  cursor: pointer;
+  font-size: 12px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  letter-spacing: 2%;
+}
+
+.btn.btn--close {
+  color: $font-color--red;
+  transform: rotate(45deg);
+}
+
+.link {
+  color: inherit;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 16px;
+  font-size: 1.6rem;
+  letter-spacing: 0.5px;
+  // letter-spacing: 0.05rem;
+  text-decoration: none;
+  text-transform: capitalize;
+}
+
+.link--lg {
+  font-size: 20px;
+  font-size: 2rem;
+  // letter-spacing: 2%;
+}
+
+.link--inherit {
+  font-size: inherit;
+  font-weight: inherit;
+  letter-spacing: initial;
+}
+
+.underline {
+  text-decoration: underline;
+}

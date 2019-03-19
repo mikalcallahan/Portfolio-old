@@ -11,7 +11,7 @@ import React from 'react'
  * @returns Paragraph
  */
 const Paragraph = props => (
-  <p className={props.className}> {props.paragraph} </p>
+  <div className={props.className}> <p className={props.size}> {props.paragraph} </p> </div>
 )
 
 export default Paragraph

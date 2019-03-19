@@ -1,0 +1,66 @@
+/* Footer Styles */
+
+@import 'styles/_breakpoints.scss';
+@import 'styles/_components.scss';
+
+.footer {
+  bottom: 0;
+  display: flex;
+  grid-gap: $column-gutter--px;
+  grid-gap: $column-gutter;
+  flex-wrap: wrap;
+  padding: 0 $padding-px;
+  padding: 0 $padding;
+  height: auto;
+  position: relative;
+  width: 100%;
+  @include breakpoint(small) {
+    display: grid;
+    grid-template-columns: $grid-template-column--medium;
+  }
+  @include breakpoint(medium) {
+    display: grid;
+    grid-template-columns: $grid-template-column--large;
+  }
+}
+
+.pre-footer {
+  width: 100%;
+  @include breakpoint(small) {
+    grid-column: $grid-column--medium;
+  }
+  @include breakpoint(medium) {
+    grid-column: $grid-column--large;
+  }
+}
+
+.footer__links {
+  align-items: center;
+  display: flex;
+  justify-content: flex-start;
+  height: auto;
+  width: 100%;
+  @include breakpoint(small) {
+    justify-content: flex-end;
+    grid-column: $grid-column--medium;
+  }
+  @include breakpoint(medium) {
+    grid-column: $grid-column--large;
+  }
+}
+
+.footer__link {
+  padding: 2rem;
+  height: auto;
+  &:first-child {
+    padding: 0;
+  }
+  &:last-child {
+    padding: 0;
+  }
+}
+
+.pre-footer__list {
+  height: auto;
+  width: 100%;
+}
