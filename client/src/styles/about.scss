@@ -84,7 +84,7 @@
 .selfie {
   display: flex;
   height: auto;
-  padding: %padding;
+  padding: $padding;
   width: 100%;
   @include breakpoint(small) {
     grid-column: 1 / 5;
