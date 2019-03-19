@@ -1,14 +1,13 @@
-## Portfolio Template using
-1. [React.js](reactjs.org)
-2. [Express.js](https://expressjs.com/)
+#### Portfolio
+Current [portfolio](mikalcallahan.me) implementation using react.js and express. Componetized and BEM approved.
 
-### about
-A portfolio template using react.js and express.js (among other things). Componetized and BEM - approved.
-
-### todo
 See TODO.md
-   ``` 
-   Portfolio/
-   |--/docs/
-      | --/TODO.md
+```
+Portfolio/
+|--/docs/
+    | --/TODO.md
+```
 
+###### Technologies:
+[React.js](reactjs.org)
+[Express.js](expressjs.com) (backend implementation coming)
