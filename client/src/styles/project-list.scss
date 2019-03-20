@@ -27,6 +27,7 @@
 }
 
 .work__item {
+  align-items: center;
   background-color: black;
   display: flex;
   justify-content: center;
@@ -53,10 +54,11 @@
 
 .work__img {
   display: flex;
-  //margin: 6rem;
+  margin: auto;
+  height: auto;
   width: 100%;
   @include breakpoint(medium) {
-    margin: 6rem;
+    //margin: 6rem;
     width: 100%;
   }
   &.fg {
