@@ -43,15 +43,21 @@ function ListWorks(props) {
   return (
     <div className='works'>
       <ul className='works__list'>
-        <li className='work__item' key='0'>
+        <li className='work__row'>
+        <div className='work__item' key='0'>
           <img className='work__img' alt='Cosé, aménagement intérior' src={cose}/>
-          </li>
-         <li className='work__item' key='1'>
-          <img className='work__img fg' alt='Food Gorilla' src={foodgorilla}/>
-        </li>
-        <li className='work__item' key='1'>
+        </div>
+      </li>
+      <li className='work__row'>
+         <div className='work__item' key='1'>
+           <img className='work__img fg' alt='Food Gorilla' src={foodgorilla}/>
+        </div>
+      </li>
+      <li className='work__row'>
+        <div className='work__item' key='1'>
           <img className='work__img' alt='Bettina Heinz Art' src={bhArt}/>
-        </li>
+        </div>
+      </li>
       </ul>
     </div>
   )
