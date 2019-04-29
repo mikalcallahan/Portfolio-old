@@ -33,6 +33,8 @@ const ProjectList = [
   }
 ]
 
+//const WorkImg
+
 function ListWorks(props) {
        // let worksList = selectedWorks.map(item => (
   /*let worksList = ProjectList.map(item => (

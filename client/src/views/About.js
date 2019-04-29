@@ -7,9 +7,9 @@
 import React, { Component } from 'react'
 // import PropTypes from 'prop-types'
 import axios from 'axios'
-import PageTitle from 'components/PageTitle.js'
-import Paragraph from 'components/Paragraph.js'
-import ProjectList from 'components/ProjectList.js'
+import PageTitle from 'components/PageTitle'
+import Paragraph from 'components/Paragraph'
+import ProjectList from 'components/ProjectList'
 import 'styles/about.scss'
 // import cose from './cose.jpg'
 //import foodgorilla from 'assets/works/foodgorilla.png'
@@ -30,30 +30,29 @@ export default class About extends Component {
   }
   */
 
-  constructor()  {
+  constructor() {
     super()
     this.handleScroll = this.handleScroll.bind(this)
-    this.state = { 
+    this.state = {
       opacity: 0,
     }
   }
 
   async componentDidMount() {
-    window.addEventListener('scroll', this.handleScroll);
-    window.onscroll =()=>{
-      this.setState(
-        {
-          //pageTop: document.scrolTop(),
-          currentScrollHeight: window.scrollY
-        })
+    window.addEventListener('scroll', this.handleScroll)
+    window.onscroll = () => {
+      this.setState({
+        //pageTop: document.scrolTop(),
+        currentScrollHeight: window.scrollY,
+      })
     }
   }
 
   componentWillUnmount() {
-    window.removeEventListener('scroll', this.handleScroll);
+    window.removeEventListener('scroll', this.handleScroll)
     //}
     // urlPosts = 'http://localhost:1337/posts'
-/*    axios.get('http://localhost:1337/posts', {
+    /*    axios.get('http://localhost:1337/posts', {
     }).then(response => {
       // Handle success.
       console.log('Got some data', response.data[0].title)
@@ -62,18 +61,18 @@ export default class About extends Component {
       console.log('An error occurred:', error)
     });
     */
-    }
+  }
 
   handleScroll(e) {
     console.log('this is scrolling')
   }
-  
+
   render() {
     // const opacity = Math.min(100 / this.state.currentScrollHeight, 1)
     // const { match, location, history } = this.props
     const introParagraph = `I am a software developer and UI/UX designer in love with the process of designing and developing user experiences.
        I create full-stack solutions to web oriented needs, from e-commerce to web apps.`
-      /*
+    /*
     const selectedWorks = [
       {
         id: '0',
@@ -82,7 +81,7 @@ export default class About extends Component {
       }
     ]
     */
-      /*    function ListWorks(props) {
+    /*    function ListWorks(props) {
       // let worksList = selectedWorks.map(item => (
       let worksList = ProjectList.map(item => (
         <li className='work' key={item.id}>
@@ -100,19 +99,27 @@ export default class About extends Component {
       {
         id: '0',
         name: 'UI/UX Design',
-        desc: 'User Centered Modern Designs are what I find myself tending to create. I am constantly inspired by not just design, but nature and conversation as well. Each experience I come out of shapes my perspective in some way and in turn shapes my designs.',
+        desc:
+          'User Centered Modern Designs are what I find myself tending to create. I am constantly inspired by not just design, but nature and conversation as well. Each experience I come out of shapes my perspective in some way and in turn shapes my designs.',
       },
       {
         id: '1',
         name: 'Full-Stack Development',
-        desc: 'Front-end, Back-end, or both I’ve got you covered. With a background in computer science, I understand what it takes to write efficienct, clean, and future-proof code. A passion for technology keeps my up-to-date with the latest trends and lasting tools.',
+        desc:
+          'Front-end, Back-end, or both I’ve got you covered. With a background in computer science, I understand what it takes to write efficienct, clean, and future-proof code. A passion for technology keeps my up-to-date with the latest trends and lasting tools.',
       },
       {
         id: '2',
         name: 'SEO / E-Commerce',
-        desc: 'Helping you stay on top of the search engines. Constantly growing with Google’s search algorithms and social media trackers.',
+        desc:
+          'Helping you stay on top of the search engines. Constantly growing with Google’s search algorithms and social media trackers.',
       },
-      { id: '3', name: 'Consulting', desc: 'If you just want some advice, I offer consulting in UI/UX, branding, marketing, creative strategies, and social media.', },
+      {
+        id: '3',
+        name: 'Consulting',
+        desc:
+          'If you just want some advice, I offer consulting in UI/UX, branding, marketing, creative strategies, and social media.',
+      },
     ]
 
     /* Specialize Component
@@ -180,7 +187,10 @@ export default class About extends Component {
     }
     return (
       <section className='about'>
-        <Paragraph className='intro' size='p--xl' paragraph={introParagraph} />
+        <Paragraph className='intro' size='p--xl'>
+          {' '}
+          {introParagraph}{' '}
+        </Paragraph>
         <ProjectList />
         <Specialize />
         <Create />

@@ -4,7 +4,7 @@
  * @version: a-0.0.1
  */
 
-// Imports
+// imports
 import React, { Component } from 'react'
 import { BrowserRouter as Router, NavLink } from 'react-router-dom'
 import MenuOverlay from 'components/MenuOverlay'
@@ -28,7 +28,7 @@ const links = [
 /* Header
  *
  * @class
- * @returns routed header
+ * @returns returns header
  * @todo refactor like Footer.js
  */
 export default class Header extends Component {
