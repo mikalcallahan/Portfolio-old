@@ -48,9 +48,11 @@
 
 .intro {
   background-color: $background-color;
+  height: 80vh;
   margin: 0;
   padding: $padding-px;
   padding: $padding;
+
   //padding: 0 0 40px $padding;
   p {
     animation-duration: 2.5s;

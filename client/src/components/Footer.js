@@ -5,7 +5,7 @@
  */
 
 // Imports
-import React, { Component } from 'react'
+import React from 'react'
 import styled from 'styled-components'
 import PreFooter from 'components/PreFooter'
 import FooterLinks from 'components/FooterLinks'
@@ -41,18 +41,21 @@ const getFooterLinks = () => {
 const Footer = styled.footer`
   bottom: 0;
   display: flex;
-  grid-gap: {variables.columnGutterPx};
-  grid-gap: {variables.columGutter};
+  grid-gap: ${variables.columnGutterPx};
+  grid-gap: ${variables.columGutter};
   flex-wrap: wrap;
-  padding: $padding-px;
-  padding: $padding;
+  /*padding: 1px;
+  padding: 1rem;
+  */
+  padding: ${variables.paddingPx};
+  padding: ${variables.padding};
   height: auto;
   position: relative;
   width: 100%;
   ${breakpoint.small`
     display: grid;
-    grid-column: {variables.gridColumn};
-    grid-template-columns: {variables.gridTemplateColumnMedium};
+    grid-column: ${variables.gridColumn};
+    grid-template-columns: ${variables.gridTemplateColumnMedium};
   `}
 `
 
