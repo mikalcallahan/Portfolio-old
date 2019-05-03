@@ -12,13 +12,16 @@
     "react-router-dom": "^4.3.1",
     "react-scripts": "2.1.1",
     "sass-loader": "^7.1.0",
-    "style-loader": "^0.23.1"
+    "style-loader": "^0.23.1",
+    "styled-components": "^4.2.0"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "now-dev": "react-scripts start",
+    "now-build": "react-scripts build"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -30,6 +33,7 @@
     "not op_mini all"
   ],
   "devDependencies": {
+    "babel-plugin-root-import": "^6.1.0",
     "esdoc": "^1.1.0",
     "esdoc-standard-plugin": "^1.0.0",
     "react-feather": "^1.1.4"

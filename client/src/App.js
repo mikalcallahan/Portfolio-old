@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
-import Header from 'components/Header'
-import Navigation from 'components/Navigation'
+import Header from './components/Header'
+import Navigation from './components/Navigation'
 import Footer from 'components/Footer'
-import 'styles/app.scss'
+import './styles/app.scss'
 
 function App() {
   return (

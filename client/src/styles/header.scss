@@ -45,8 +45,8 @@ nav .active {
     font-size: 2rem;
   }
   @include breakpoint(medium) {
-    // grid-column: $grid-column--large;
-    grid-column: 2 / 16;
+    grid-column: $grid-column--large;
+    //grid-column: 2 / 16;
     justify-content: flex-end;
     .logo {
       display: flex;

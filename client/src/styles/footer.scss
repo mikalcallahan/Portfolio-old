@@ -15,7 +15,8 @@
   height: auto;
   position: relative;
   width: 100%;
-  @include breakpoint(small) {
+}
+/*  @include breakpoint(small) {
     display: grid;
     grid-template-columns: $grid-template-column--medium;
   }
@@ -23,11 +24,10 @@
     display: grid;
     grid-template-columns: $grid-template-column--large;
   }
-}
 */
 .pre-footer {
   width: 100%;
-  .pre-footer__link {
+  .pre-footer__link  {
     .link.nav {
       visibility: hidden;
     }
@@ -51,7 +51,8 @@
     grid-column: $grid-column--medium;
   }
   @include breakpoint(medium) {
-    grid-column: $grid-column--large;
+    //grid-column: $grid-column--large;
+    grid-column: 2 / 11;
   }
 }
 

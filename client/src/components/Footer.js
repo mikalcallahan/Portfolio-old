@@ -10,6 +10,7 @@ import styled from 'styled-components'
 import PreFooter from 'components/PreFooter'
 import FooterLinks from 'components/FooterLinks'
 import breakpoint from 'styles/breakpoints'
+import variables from 'styles/variables'
 import 'styles/footer.scss'
 import 'styles/_variables.scss'
 
@@ -40,8 +41,8 @@ const getFooterLinks = () => {
 const Footer = styled.footer`
   bottom: 0;
   display: flex;
-  grid-gap: $column-gutter--px;
-  grid-gap: $column-gutter;
+  grid-gap: {variables.columnGutterPx};
+  grid-gap: {variables.columGutter};
   flex-wrap: wrap;
   padding: $padding-px;
   padding: $padding;
@@ -50,10 +51,8 @@ const Footer = styled.footer`
   width: 100%;
   ${breakpoint.small`
     display: grid;
-    grid-template-columns: $grid-template-column--medium;
-  `}
-  ${breakpoint.medium`
-    grid-template-columns: $grid-template-column--large;
+    grid-column: {variables.gridColumn};
+    grid-template-columns: {variables.gridTemplateColumnMedium};
   `}
 `
 
