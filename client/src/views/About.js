@@ -5,6 +5,7 @@
  */
 
 import React, { Component } from 'react'
+import styled from 'styled-components'
 // import PropTypes from 'prop-types'
 import axios from 'axios'
 import PageTitle from 'components/PageTitle'
@@ -70,8 +71,12 @@ export default class About extends Component {
   render() {
     // const opacity = Math.min(100 / this.state.currentScrollHeight, 1)
     // const { match, location, history } = this.props
-    const introParagraph = `I am a software developer and UI/UX designer in love with the process of designing and developing user experiences.
-       I create full-stack solutions to web oriented needs, from e-commerce to web apps.`
+    const Intro = styled.p`
+      font-size: 28px;
+      font-size: 2.8rem;
+    `
+    //const introParagraph = `Mikal Callahan is a software <span class='bold'>developer</span> and UI/UX designer in love with the process of designing and developing user experiences. I create full-stack solutions to web oriented needs, from e-commerce to web apps.`
+
     /*
     const selectedWorks = [
       {
@@ -162,8 +167,14 @@ export default class About extends Component {
             development.
           </p>
           <p>
-            I have had the pleasure of working with wonderful people including
-            Bettina Heinz,{' '}
+            I have had the pleasure of working with wonderful people
+            including&nbsp;
+            <span className='underline'>
+              <a className='link link--inherit' href='https://unioncowork.com'>
+                Union Cowork
+              </a>
+            </span>
+            ,&nbsp;
             <span className='underline'>
               {' '}
               <a
@@ -172,6 +183,12 @@ export default class About extends Component {
               >
                 {' '}
                 Adaptive Web Studio
+              </a>
+            </span>
+            , &nbsp;
+            <span className='underline'>
+              <a className='link link--inherit' href='https://www.rayan.io/'>
+                Rayan Bouajram
               </a>
             </span>
             , Heavenly Gift Baskets, and{' '}
@@ -188,8 +205,12 @@ export default class About extends Component {
     return (
       <section className='about'>
         <Paragraph className='intro' size='p--xl'>
-          {' '}
-          {introParagraph}{' '}
+          <Intro>
+            Mikal Callahan is a software developer and UI/UX designer in love
+            with the process of designing and developing user experiences. I
+            create full-stack solutions to web oriented needs, from e-commerce
+            to web apps.
+          </Intro>
         </Paragraph>
         <ProjectList />
         <Specialize />
@@ -198,3 +219,12 @@ export default class About extends Component {
     )
   }
 }
+
+/*
+ *
+  <Paragraph className='intro' size='p--xl'>
+          {' '}
+          {introParagraph}{' '}
+        </Paragraph>
+        *
+        */

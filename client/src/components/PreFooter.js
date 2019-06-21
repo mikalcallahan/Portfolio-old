@@ -42,7 +42,7 @@ class PreFooter extends Component {
               className='link email'
               href='mailto:mikal.callahan@icloud.com?subject=Hey there'
             >
-              mikal.callahan@icloud.com
+              hello@mikal.co
             </a>
           </li>
           <li className='pre-footer__link'>

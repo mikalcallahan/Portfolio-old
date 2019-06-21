@@ -21,9 +21,10 @@ nav .active {
     background-color: $background-color;
     color: $font-color;
     display: grid;
-    column-gap: $column-gutter--px;
-    column-gap: $column-gutter;
+    //column-gap: $column-gutter--px;
+    //column-gap: $column-gutter;
     grid-template-columns: $grid-template-column--large;
+    padding-top: 2%;
     position: absolute;
     width: 100%;
   }

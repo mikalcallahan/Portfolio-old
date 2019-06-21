@@ -7,7 +7,8 @@
 
 import React from 'react'
 import {
-  BrowserRouter as Router,
+  //BrowserRouter as Router,
+  HashRouter as Router,
   Route,
   Redirect,
   Switch,
@@ -26,6 +27,7 @@ const Navigation = () => (
   <Router>
     <Switch>
       <Route path='/about/' component={About} />
+      <Route path='*' component={About} />
       <Redirect to='/about' />
     </Switch>
   </Router>

@@ -47,7 +47,7 @@
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  margin: .05rem 0;
+  margin: 0.05rem 0;
   padding: 4rem;
   width: 100%;
   @include breakpoint(medium) {
@@ -77,9 +77,9 @@
     width: 100%;
   }
   &.fg {
-    width: 27.5%;
+    //width: 27.5%;
     @include breakpoint(small) {
-      width: 27.5%;
+      //width: 27.5%;
     }
   }
 }

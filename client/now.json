@@ -1,6 +1,7 @@
 {
   "version": 2,
   "name": "Portfolio",
+  "alias": "mikal.co",
   "builds": [
     {
       "src": "package.json",

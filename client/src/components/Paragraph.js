@@ -18,7 +18,7 @@ export default styled.p`
   font-weight: 400;
   letter-spacing: .03em;
   margin: auto;
-  justify-content: center;
-  text-align: center;
+  //justify-content: center;
+  //text-align: center;
   width: auto;
   `
